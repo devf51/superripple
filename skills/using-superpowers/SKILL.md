@@ -29,6 +29,7 @@ description: ใช้เมื่อเริ่มบทสนทนาใด�
 
 - "มาสร้าง X กัน" → super-ripple:brainstorming ก่อน แล้วค่อย skill ด้านการลงมือ
 - "แก้บั๊กนี้" → super-ripple:systematic-debugging ก่อน แล้วค่อย skill เฉพาะด้าน
+- สร้างระบบซอฟต์แวร์ตั้งแต่ต้น → super-ripple:brainstorming (ได้ spec) → super-ripple:design (ได้ design) → super-ripple:writing-plans (ได้แผน) → ลงมือ ทุกขั้นเริ่มกลางทางได้ถ้ามีอินพุตของมัน ไม่ต้องย้อนไปขั้นก่อน
 
 ## สัญญาณเตือน
 
