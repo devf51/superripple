@@ -1,0 +1,13 @@
+{
+  "name": "super-ripple",
+  "version": "7.0.2",
+  "description": "Super Ripple skills library for Claude Code",
+  "type": "module",
+  "keywords": [
+    "skills",
+    "tdd",
+    "debugging",
+    "collaboration",
+    "workflow"
+  ]
+}
