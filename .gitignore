@@ -1,7 +1,7 @@
 .worktrees/
 .private-journal/
 .claude/
-.super-ripple/
+.superripple/
 .DS_Store
 node_modules/
 inspo

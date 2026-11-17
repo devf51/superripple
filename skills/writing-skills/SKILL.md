@@ -9,13 +9,13 @@ description: ใช้เมื่อสร้าง skill ใหม่ แก�
 
 **การเขียน skill คือ Test-Driven Development ที่ใช้กับเอกสารกระบวนการ**
 
-**skill ส่วนตัวอยู่ในไดเรกทอรี skills ของ runtime คุณ** (`~/.claude/skills/` บน Claude Code) — ดู [codex-tools.md](../using-superpowers/references/codex-tools.md) หรือ [gemini-tools.md](../using-superpowers/references/gemini-tools.md) สำหรับพาธบน runtime เหล่านั้น Codex, Copilot CLI และ Gemini CLI ต่างก็รู้จัก `~/.agents/skills/` เป็นชื่อแทนข้าม runtime ด้วย
+**skill ส่วนตัวอยู่ในไดเรกทอรี skills ของ runtime คุณ** (`~/.claude/skills/` บน Claude Code) — ดู [codex-tools.md](../using-superripple/references/codex-tools.md) หรือ [gemini-tools.md](../using-superripple/references/gemini-tools.md) สำหรับพาธบน runtime เหล่านั้น Codex, Copilot CLI และ Gemini CLI ต่างก็รู้จัก `~/.agents/skills/` เป็นชื่อแทนข้าม runtime ด้วย
 
 คุณเขียนเทสต์เคส (สถานการณ์กดดันด้วย subagent) ดูมันล้มเหลว (พฤติกรรมตั้งต้น) เขียน skill (เอกสาร) ดูเทสต์ผ่าน (agent ทำตาม) และ refactor (ปิดช่องโหว่)
 
 **หลักการ:** ถ้าไม่ได้ดู agent ล้มเหลวเมื่อไม่มี skill คุณไม่รู้ว่า skill สอนสิ่งที่ถูกหรือเปล่า
 
-**ความรู้พื้นฐานที่ต้องมี:** คุณต้องเข้าใจ super-ripple:test-driven-development ก่อนใช้ skill นี้ skill นั้นกำหนดวงจร RED-GREEN-REFACTOR พื้นฐาน skill นี้ปรับ TDD ให้ใช้กับเอกสาร
+**ความรู้พื้นฐานที่ต้องมี:** คุณต้องเข้าใจ superripple:test-driven-development ก่อนใช้ skill นี้ skill นั้นกำหนดวงจร RED-GREEN-REFACTOR พื้นฐาน skill นี้ปรับ TDD ให้ใช้กับเอกสาร
 
 **แนวทางทางการ:** สำหรับแนวปฏิบัติที่ดีที่สุดในการเขียน skill ของ Anthropic ดู references/anthropic-best-practices.md เอกสารนี้ให้รูปแบบและแนวทางเพิ่มเติมที่เสริมแนวทางที่ใช้ TDD เป็นหลักของ skill นี้
 
@@ -171,7 +171,7 @@ pptx/
 - อย่า "ดัดแปลง" ขณะรันเทสต์
 - ลบคือลบ
 
-**ความรู้พื้นฐานที่ต้องมี:** skill super-ripple:test-driven-development อธิบายว่าทำไมสำคัญ หลักการเดียวกันใช้กับเอกสาร
+**ความรู้พื้นฐานที่ต้องมี:** skill superripple:test-driven-development อธิบายว่าทำไมสำคัญ หลักการเดียวกันใช้กับเอกสาร
 
 ## การทดสอบ Skill ทุกชนิด
 

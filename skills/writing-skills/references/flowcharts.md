@@ -1,6 +1,6 @@
 # Flowcharts in Skills
 
-Part of super-ripple:writing-skills.
+Part of superripple:writing-skills.
 
 ## Flowchart Usage
 

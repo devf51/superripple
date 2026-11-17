@@ -1,7 +1,7 @@
 {
-  "name": "super-ripple",
+  "name": "superripple",
   "version": "7.0.2",
-  "description": "Super Ripple skills library for Claude Code",
+  "description": "superripple skills library for Claude Code",
   "type": "module",
   "keywords": [
     "skills",

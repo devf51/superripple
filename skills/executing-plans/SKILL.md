@@ -21,13 +21,13 @@ description: ใช้เมื่อลงมือทำตามแผนใ�
 
 ## เมื่อไหร่ควรใช้
 
-- คุณมีแผนจาก super-ripple:writing-plans และ human partner เลือกให้ทำในนี้ตอนส่งต่อ
-- harness ของคุณไม่มีเครื่องมือ subagent (ดูเอกสารอ้างอิงตามแพลตฟอร์มใน `../using-superpowers/references/`) ห้ามแต่งการส่งงานขึ้นมา ทำตามแผนที่นี่
-- งานส่วนใหญ่เป็นอิสระต่อกัน — เงื่อนไขเดียวกับ super-ripple:subagent-driven-development
+- คุณมีแผนจาก superripple:writing-plans และ human partner เลือกให้ทำในนี้ตอนส่งต่อ
+- harness ของคุณไม่มีเครื่องมือ subagent (ดูเอกสารอ้างอิงตามแพลตฟอร์มใน `../using-superripple/references/`) ห้ามแต่งการส่งงานขึ้นมา ทำตามแผนที่นี่
+- งานส่วนใหญ่เป็นอิสระต่อกัน — เงื่อนไขเดียวกับ superripple:subagent-driven-development
 
 แผนที่ระบุครบทำให้การลงมือในนี้เป็นการถอดความบวกการทดสอบ: ทำงานได้ดีบนโมเดลระดับกลางของ session และจุดเดียวที่โมเดลเก่งที่สุดคุ้มค่าคือรีวิวสุดท้าย ซึ่ง skill นี้ส่งแยกต่างหาก บอก human partner เมื่อพวกเขาเลือกทำในนี้
 
-เลือก super-ripple:subagent-driven-development เมื่อ human partner ต้องการด่านรีวิวทุกงาน หรือเมื่อแผนยาวจนงานท้ายๆ จะรันบน context ที่ถูกบีบอัด การลงมือในนี้กับแผนยาวยังใช้ได้ — ledger คือสิ่งที่ทำให้กู้คืนได้ — แต่งานสุดท้ายได้รับตัวคุณน้อยที่สุด
+เลือก superripple:subagent-driven-development เมื่อ human partner ต้องการด่านรีวิวทุกงาน หรือเมื่อแผนยาวจนงานท้ายๆ จะรันบน context ที่ถูกบีบอัด การลงมือในนี้กับแผนยาวยังใช้ได้ — ledger คือสิ่งที่ทำให้กู้คืนได้ — แต่งานสุดท้ายได้รับตัวคุณน้อยที่สุด
 
 ## กระบวนการ
 
@@ -51,7 +51,7 @@ digraph process {
     "Final whole-branch review (fresh reviewer if you have one)" [shape=box];
     "Re-grade, then: Critical/Important → ONE fix pass, each fix RED→GREEN + green suite; Minor → ledger" [shape=box];
     "Final review clean: delete this plan's workspace" [shape=box];
-    "Use super-ripple:finishing-a-development-branch" [shape=box style=filled fillcolor=lightgreen];
+    "Use superripple:finishing-a-development-branch" [shape=box style=filled fillcolor=lightgreen];
 
     "Setup: worktree, workspace + ledger, read plan + spec, pre-flight scan" -> "task-start: brief + BASE; read the brief";
     "task-start: brief + BASE; read the brief" -> "Work the steps in order: TDD, run every verification, read every output";
@@ -67,26 +67,26 @@ digraph process {
     "More tasks remain?" -> "Final whole-branch review (fresh reviewer if you have one)" [label="no"];
     "Final whole-branch review (fresh reviewer if you have one)" -> "Re-grade, then: Critical/Important → ONE fix pass, each fix RED→GREEN + green suite; Minor → ledger";
     "Re-grade, then: Critical/Important → ONE fix pass, each fix RED→GREEN + green suite; Minor → ledger" -> "Final review clean: delete this plan's workspace";
-    "Final review clean: delete this plan's workspace" -> "Use super-ripple:finishing-a-development-branch";
+    "Final review clean: delete this plan's workspace" -> "Use superripple:finishing-a-development-branch";
 }
 ```
 
 ## การตั้งค่า
 
-ให้แน่ใจว่างานเกิดใน workspace ที่แยกออกมา: ใช้ super-ripple:using-git-worktrees เพื่อสร้างหรือตรวจของที่มีอยู่ ห้ามเริ่มลงมือบน branch main/master โดยไม่ได้รับความยินยอมที่ชัดเจนจาก human partner
+ให้แน่ใจว่างานเกิดใน workspace ที่แยกออกมา: ใช้ superripple:using-git-worktrees เพื่อสร้างหรือตรวจของที่มีอยู่ ห้ามเริ่มลงมือบน branch main/master โดยไม่ได้รับความยินยอมที่ชัดเจนจาก human partner
 
 ความจำของบทสนทนาไม่รอดจากการบีบอัด ผู้ลงมือในนี้ที่เสียตำแหน่งจะทำงานซ้ำที่มี commit อยู่แล้ว — ความล้มเหลวเดียวกับ controller ที่ส่งงานซ้ำ แต่จ่ายใน context ของคุณเอง ติดตามความคืบหน้าในไฟล์ ledger ไม่ใช่แค่ใน todo todo ของ harness คือมุมมองสด ส่วน ledger คือบันทึก
 
-workspace และ ledger ใช้ร่วมกับ super-ripple:subagent-driven-development — ไดเรกทอรีและรูปแบบเดียวกัน — ดังนั้นแผนเปลี่ยนผู้ลงมือกลางทางได้ และตัวใหม่ทำต่อจาก ledger เดียวกัน
+workspace และ ledger ใช้ร่วมกับ superripple:subagent-driven-development — ไดเรกทอรีและรูปแบบเดียวกัน — ดังนั้นแผนเปลี่ยนผู้ลงมือกลางทางได้ และตัวใหม่ทำต่อจาก ledger เดียวกัน
 
-- แต่ละแผนมี workspace ของตัวเอง: ตอนเริ่ม skill รัน `../subagent-driven-development/scripts/sdd-workspace PLAN_FILE` ด้วยพาธสัมบูรณ์ จาก working tree ที่คุณลงมืออยู่ — มันพิมพ์ไดเรกทอรีที่ git ไม่ติดตามของแผน (`<repo-root>/.super-ripple/sdd/<plan-basename>/`) ซึ่งเป็นที่อยู่ของทุกชิ้นงานของแผน "นี้": ledger, brief, แพ็กเกจรีวิว ไดเรกทอรีของแผนอื่นไม่ใช่ที่ของคุณที่จะอ่านหรือเขียน
+- แต่ละแผนมี workspace ของตัวเอง: ตอนเริ่ม skill รัน `../subagent-driven-development/scripts/sdd-workspace PLAN_FILE` ด้วยพาธสัมบูรณ์ จาก working tree ที่คุณลงมืออยู่ — มันพิมพ์ไดเรกทอรีที่ git ไม่ติดตามของแผน (`<repo-root>/.superripple/sdd/<plan-basename>/`) ซึ่งเป็นที่อยู่ของทุกชิ้นงานของแผน "นี้": ledger, brief, แพ็กเกจรีวิว ไดเรกทอรีของแผนอื่นไม่ใช่ที่ของคุณที่จะอ่านหรือเขียน
 - ตรวจ ledger ของแผนนี้ที่ `<workspace>/progress.md` ถ้าบรรทัดแรกระบุไฟล์แผนของคุณ งานที่มีบรรทัด `Task <N>: complete` เสร็จแล้ว — อย่าทำซ้ำ ทำต่อที่งานแรกที่ไม่มีบรรทัดนั้น commit ของมันมีอยู่ใน git แม้ context ของคุณจะจำไม่ได้ว่าทำ: หลังการบีบอัด เชื่อ ledger และ `git log` มากกว่าความทรงจำของคุณ ledger ที่บรรทัดแรกระบุไฟล์แผนอื่นคือความคืบหน้าของแผนอื่น: ปล่อยไว้ แล้วเริ่มของคุณใหม่
 - สร้าง ledger โดยให้ตัวตนเป็นบรรทัดแรก: `# SDD ledger — plan: <พาธไฟล์แผน>`
 - `git clean -fdx` จะทำลาย workspace (มันเป็นที่ทิ้งงานที่ git ไม่ติดตาม) ถ้าเกิดขึ้น ให้กู้จาก `git log`
 
 อ่านแผนหนึ่งครั้ง จดบริบทและข้อจำกัดทั่วไป และสร้าง todo หนึ่งอันต่องาน ถ้าแผนระบุ Spec ให้อ่านด้วย: spec คืออำนาจที่แผนอ้างเหตุผล และความขัดแย้งในแผนถูกตัดสินตามมัน แผนที่ไม่มี spec ที่เข้าถึงได้ ให้จดใน ledger ว่าเป็นอย่างนั้น — ruling ที่ทำโดยไม่มี spec เป็นแบบชั่วคราว
 
-**SUB-SKILL ที่ต้องใช้:** โหลด super-ripple:test-driven-development ตอนนี้ ก่อนงานที่ 1 มันควบคุมทุกขั้นของทุกงานด้านล่าง แผนที่ขั้นตอนบอก "เขียนเทสต์ที่ล้มเหลวก่อน" อยู่แล้วก็ไม่ได้ยกเว้นคุณจากการอ่านมัน
+**SUB-SKILL ที่ต้องใช้:** โหลด superripple:test-driven-development ตอนนี้ ก่อนงานที่ 1 มันควบคุมทุกขั้นของทุกงานด้านล่าง แผนที่ขั้นตอนบอก "เขียนเทสต์ที่ล้มเหลวก่อน" อยู่แล้วก็ไม่ได้ยกเว้นคุณจากการอ่านมัน
 
 ก่อนงานที่ 1 สแกนแผนหาความขัดแย้งระหว่างงาน บล็อก Interfaces ของแผนบอกว่าต้องดูตรงไหน: สำหรับทุกงานที่ใช้สิ่งที่งานก่อนหน้าผลิต หนึ่งแถวใน ledger — สองงาน สิ่งที่งานหนึ่งผลิตเทียบกับสิ่งที่อีกงานใช้ และสิ่งที่คุณพบ งานที่ไม่ใช้อะไรร่วมกันไม่มีแถว แผนที่งานไม่ใช้อะไรร่วมกันได้บรรทัดเดียว `Pre-flight: no shared interfaces` ตัดสินแต่ละความขัดแย้งที่แถวเผยโดยใช้ spec เป็นอำนาจที่ผูกมัด บันทึก ruling ข้างแถวของมัน และเริ่มงานที่ 1 ตัวข้อความของแต่ละงานถูกตรวจตอนอ่าน brief ของมัน ไม่ใช่ที่นี่
 
@@ -103,12 +103,12 @@ workspace และ ledger ใช้ร่วมกับ super-ripple:subagent-
 
 ### 2. ทำตามขั้นตอน
 
-ขั้นตอนของแผนเรียงตาม RED-GREEN อยู่แล้ว ทำตามลำดับนั้นภายใต้ super-ripple:test-driven-development ที่โหลดตอนตั้งค่า โค้ดของขั้นเทสต์ถูกเขียนก่อนและรันก่อน การดูมันล้มเหลวคือขั้นตอน ไม่ใช่พิธีกรรม — เทสต์ที่ผ่านก่อนที่การทำงานจริงจะมีอยู่คือข้อค้นพบเกี่ยวกับเทสต์
+ขั้นตอนของแผนเรียงตาม RED-GREEN อยู่แล้ว ทำตามลำดับนั้นภายใต้ superripple:test-driven-development ที่โหลดตอนตั้งค่า โค้ดของขั้นเทสต์ถูกเขียนก่อนและรันก่อน การดูมันล้มเหลวคือขั้นตอน ไม่ใช่พิธีกรรม — เทสต์ที่ผ่านก่อนที่การทำงานจริงจะมีอยู่คือข้อค้นพบเกี่ยวกับเทสต์
 
 ทุกขั้นที่รันคำสั่งมีบรรทัด `Expected:` รันคำสั่ง อ่านผล และเปรียบเทียบ สามผลลัพธ์:
 
 - **ตรง** ขั้นถัดไป
-- **โค้ดผิด** ใช้ super-ripple:systematic-debugging หาสาเหตุ ห้ามปะอาการเพื่อให้ผลของขั้นตรง
+- **โค้ดผิด** ใช้ superripple:systematic-debugging หาสาเหตุ ห้ามปะอาการเพื่อให้ผลของขั้นตรง
 - **แผนผิด** — ขั้นหนึ่งขัดกับ spec, interface จากงานก่อนหน้าไม่ตรงกับที่งานนี้ใช้, คำสั่งที่ใช้ไม่ได้ ตัดสินการเปลี่ยนแปลงเล็กที่สุดที่ตรง spec บันทึกใน ledger เป็น `Task <N>: Ruling: <ข้อค้นพบ> — <สิ่งที่ตัดสินและเหตุผล>` และทำต่อ ruling ถูกส่งต่อ ไม่ใช่จำ: งานหลังๆ ที่แตะ interface เดียวกันอ่านมันจาก ledger
 
 Commit ตามที่ขั้น commit ของแผนบอก งานที่ครอบคลุมหลาย commit ไม่เป็นไร BASE คือสิ่งที่ช่วงรีวิวตัดออกมา ไม่ใช่ `HEAD~1`
@@ -122,7 +122,7 @@ Commit ตามที่ขั้น commit ของแผนบอก งา�
 - ทุกบรรทัด `Expected:` ใน brief ถูกเทียบกับผลจริง
 - ทุกการเบี่ยงจาก brief มีบรรทัด `Ruling:` ใน ledger
 
-**SUB-SKILL ที่ต้องใช้:** super-ripple:verification-before-completion ควบคุมการอ้าง ถ้าขาดข้อใด งานยังไม่สมบูรณ์: ทำให้จบ
+**SUB-SKILL ที่ต้องใช้:** superripple:verification-before-completion ควบคุมการอ้าง ถ้าขาดข้อใด งานยังไม่สมบูรณ์: ทำให้จบ
 
 ### 4. จบงาน
 
@@ -167,7 +167,7 @@ Commit ตามที่ขั้น commit ของแผนบอก งา�
 
 รัน `../subagent-driven-development/scripts/review-package PLAN_FILE MERGE_BASE HEAD` ด้วยพาธสัมบูรณ์ จาก working tree ที่คุณลงมืออยู่ (MERGE_BASE = commit ที่ branch เริ่ม เช่น `git merge-base main HEAD`) และรีวิวจากไฟล์ที่มันพิมพ์
 
-**มีเครื่องมือ subagent:** ส่งผู้รีวิวบนโมเดลที่เก่งที่สุดที่มี — การรีวิวทั้ง branch เป็นงานใช้ดุลยพินิจ — โดยใช้ [code-reviewer.md](../requesting-code-review/code-reviewer.md) ของ super-ripple:requesting-code-review พร้อมพาธแพ็กเกจ พาธแผนและ spec ส่วน Review Focus ของแผนตรงตัวถ้ามี (ประเภทอินพุตและโหมดล้มเหลวที่เทสต์ของแผนไม่ครอบคลุม — ผู้รีวิวตรวจแต่ละข้อโดยตั้งใจ) และตัวชี้ไปยังบรรทัด `Ruling:` ของ ledger เพื่อให้มันชั่งน้ำหนักการตัดสินใจที่คุณทำ ระบุโมเดลอย่างชัดเจน โมเดลที่ไม่ระบุจะสืบทอดจาก session ซึ่งอาจไม่ใช่ตัวที่เก่งที่สุด นี่คือ context หน้าใหม่หนึ่งเดียวที่ทั้งการรันซื้อ ห้ามข้าม และห้ามแทนที่ด้วยการอ่าน diff เอง
+**มีเครื่องมือ subagent:** ส่งผู้รีวิวบนโมเดลที่เก่งที่สุดที่มี — การรีวิวทั้ง branch เป็นงานใช้ดุลยพินิจ — โดยใช้ [code-reviewer.md](../requesting-code-review/code-reviewer.md) ของ superripple:requesting-code-review พร้อมพาธแพ็กเกจ พาธแผนและ spec ส่วน Review Focus ของแผนตรงตัวถ้ามี (ประเภทอินพุตและโหมดล้มเหลวที่เทสต์ของแผนไม่ครอบคลุม — ผู้รีวิวตรวจแต่ละข้อโดยตั้งใจ) และตัวชี้ไปยังบรรทัด `Ruling:` ของ ledger เพื่อให้มันชั่งน้ำหนักการตัดสินใจที่คุณทำ ระบุโมเดลอย่างชัดเจน โมเดลที่ไม่ระบุจะสืบทอดจาก session ซึ่งอาจไม่ใช่ตัวที่เก่งที่สุด นี่คือ context หน้าใหม่หนึ่งเดียวที่ทั้งการรันซื้อ ห้ามข้าม และห้ามแทนที่ด้วยการอ่าน diff เอง
 
 **ไม่มีเครื่องมือ subagent:** อ่าน code-reviewer.md และทำการรีวิวนั้นเองกับแพ็กเกจ เป็นรอบแยกหลังบรรทัด ledger ของงานสุดท้าย เขียน `Final review: self-review (no subagent tool)` ลง ledger และบอกในข้อความสุดท้าย: การรีวิวตัวเองโดยผู้เขียนอ่อนกว่าผู้รีวิวหน้าใหม่ และ human partner ตัดสินว่าพอไหมก่อน merge
 
@@ -186,7 +186,7 @@ Commit ตามที่ขั้น commit ของแผนบอก งา�
 
 เมื่อรีวิวสุดท้ายสะอาดและการแก้ถูก commit แล้ว ลบไดเรกทอรี workspace ของแผนนี้ — ประวัติ git คือบันทึกตอนนี้ ไดเรกทอรีข้างเคียงเป็นของแผนอื่น ปล่อยไว้
 
-ใช้ super-ripple:finishing-a-development-branch
+ใช้ superripple:finishing-a-development-branch
 
 ## ข้ออ้างที่พบบ่อย
 

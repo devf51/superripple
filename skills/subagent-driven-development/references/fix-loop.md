@@ -1,6 +1,6 @@
 # The Fix Loop
 
-Part of super-ripple:subagent-driven-development. The task review reported
+Part of superripple:subagent-driven-development. The task review reported
 spec ❌, a Critical or Important finding, or a ⚠️ item you confirmed as a real
 gap.
 

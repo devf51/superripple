@@ -1,13 +1,13 @@
 {
-  "name": "super-ripple-dev",
-  "description": "Development marketplace for Super Ripple core skills library",
+  "name": "superripple-dev",
+  "description": "Development marketplace for superripple core skills library",
   "owner": {
     "name": "Jesse Vincent",
     "email": "jesse@fsck.com"
   },
   "plugins": [
     {
-      "name": "super-ripple",
+      "name": "superripple",
       "description": "Core skills library for Claude Code: TDD, debugging, collaboration patterns, and proven techniques",
       "version": "7.0.2",
       "source": "./",

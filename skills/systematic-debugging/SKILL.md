@@ -174,7 +174,7 @@ description: ใช้เมื่อเจอบั๊ก เทสต์ล้
    - เทสต์อัตโนมัติถ้าทำได้
    - สคริปต์เทสต์แบบใช้ครั้งเดียวถ้าไม่มี framework
    - "ต้อง" มีก่อนแก้
-   - ใช้ skill `super-ripple:test-driven-development` เพื่อเขียนเทสต์ที่ล้มเหลวอย่างถูกต้อง
+   - ใช้ skill `superripple:test-driven-development` เพื่อเขียนเทสต์ที่ล้มเหลวอย่างถูกต้อง
 
 2. **แก้ทีละจุด**
    - จัดการสาเหตุรากที่ระบุแล้ว
@@ -186,7 +186,7 @@ description: ใช้เมื่อเจอบั๊ก เทสต์ล้
    - เทสต์ผ่านแล้วไหม?
    - ไม่มีเทสต์อื่นพังใช่ไหม?
    - ปัญหาแก้ได้จริงไหม?
-   - ใช้ skill `super-ripple:verification-before-completion` ก่อนอ้างความสำเร็จ
+   - ใช้ skill `superripple:verification-before-completion` ก่อนอ้างความสำเร็จ
 
 4. **ถ้าแก้ไม่ได้ผล**
    - หยุด

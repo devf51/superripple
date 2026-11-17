@@ -148,7 +148,7 @@ git branch -D <feature-branch>
 
 **ถ้า `GIT_DIR == GIT_COMMON`:** repo ปกติ ไม่มี worktree ให้ล้าง เสร็จ
 
-**ถ้า `WORKTREE_PATH` อยู่ใต้ `.worktrees/` หรือ `worktrees/`:** Superpowers สร้าง worktree นี้ — เราดูแลการล้าง:
+**ถ้า `WORKTREE_PATH` อยู่ใต้ `.worktrees/` หรือ `worktrees/`:** superripple สร้าง worktree นี้ — เราดูแลการล้าง:
 
 ```bash
 git worktree remove "$WORKTREE_PATH"

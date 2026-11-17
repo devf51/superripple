@@ -67,7 +67,7 @@ digraph process {
     "More tasks remain?" [shape=diamond];
     "Final review and finish: read references/final-review.md" [shape=box];
     "Final review clean: delete this plan's workspace" [shape=box];
-    "Use super-ripple:finishing-a-development-branch" [shape=box style=filled fillcolor=lightgreen];
+    "Use superripple:finishing-a-development-branch" [shape=box style=filled fillcolor=lightgreen];
 
     "Setup: worktree, ledger check, read plan, pre-flight review" -> "Dispatch implementer subagent (./implementer-prompt.md)";
     "Dispatch implementer subagent (./implementer-prompt.md)" -> "Implementer asks questions?";
@@ -83,17 +83,17 @@ digraph process {
     "More tasks remain?" -> "Dispatch implementer subagent (./implementer-prompt.md)" [label="yes"];
     "More tasks remain?" -> "Final review and finish: read references/final-review.md" [label="no"];
     "Final review and finish: read references/final-review.md" -> "Final review clean: delete this plan's workspace";
-    "Final review clean: delete this plan's workspace" -> "Use super-ripple:finishing-a-development-branch";
+    "Final review clean: delete this plan's workspace" -> "Use superripple:finishing-a-development-branch";
 }
 ```
 
 ## การตั้งค่า
 
-ให้แน่ใจว่างานเกิดใน workspace ที่แยกออกมา: ใช้ super-ripple:using-git-worktrees เพื่อสร้างหรือตรวจของที่มีอยู่ ห้ามเริ่มลงมือบน branch main/master โดยไม่ได้รับความยินยอมที่ชัดเจนจาก human partner
+ให้แน่ใจว่างานเกิดใน workspace ที่แยกออกมา: ใช้ superripple:using-git-worktrees เพื่อสร้างหรือตรวจของที่มีอยู่ ห้ามเริ่มลงมือบน branch main/master โดยไม่ได้รับความยินยอมที่ชัดเจนจาก human partner
 
 ความจำของบทสนทนาไม่รอดจากการบีบอัด ใน session จริง controller ที่เสียตำแหน่งเคยส่งงานซ้ำทั้งลำดับงานที่เสร็จแล้ว — ความล้มเหลวที่แพงที่สุดที่เคยพบ ติดตามความคืบหน้าในไฟล์ ledger ไม่ใช่แค่ใน todo
 
-- แต่ละแผนมี workspace ของตัวเอง: ตอนเริ่ม skill รัน `bash scripts/sdd-workspace PLAN_FILE` ของ skill นี้ด้วยพาธสัมบูรณ์ จาก working tree ที่คุณลงมืออยู่ — มันพิมพ์ไดเรกทอรีที่ git ไม่ติดตามของแผน (ใต้ `<repo-root>/.super-ripple/sdd/`) ซึ่งเป็นที่อยู่ของทุกชิ้นงานของแผน "นี้": ledger, brief, รายงาน, แพ็กเกจรีวิว ไดเรกทอรีของแผนอื่นไม่ใช่ที่ของคุณที่จะอ่านหรือเขียน
+- แต่ละแผนมี workspace ของตัวเอง: ตอนเริ่ม skill รัน `bash scripts/sdd-workspace PLAN_FILE` ของ skill นี้ด้วยพาธสัมบูรณ์ จาก working tree ที่คุณลงมืออยู่ — มันพิมพ์ไดเรกทอรีที่ git ไม่ติดตามของแผน (ใต้ `<repo-root>/.superripple/sdd/`) ซึ่งเป็นที่อยู่ของทุกชิ้นงานของแผน "นี้": ledger, brief, รายงาน, แพ็กเกจรีวิว ไดเรกทอรีของแผนอื่นไม่ใช่ที่ของคุณที่จะอ่านหรือเขียน
 - ตรวจ ledger ของแผนนี้ที่ `<workspace>/progress.md` ถ้ามี ให้อ่าน [references/resuming.md](references/resuming.md) ก่อนอย่างอื่น: มันบอกว่า ledger เป็นของใครและทำต่อที่ไหน
 - สร้าง ledger โดยให้ตัวตนเป็นบรรทัดแรก: `# SDD ledger — plan: <พาธไฟล์แผน>`
 - ledger คือแผนที่กู้คืนของคุณ: commit ที่มันระบุมีอยู่ใน git แม้ context ของคุณจะจำไม่ได้ว่าสร้าง หลังการบีบอัด เชื่อ ledger และ `git log` มากกว่าความทรงจำของคุณ

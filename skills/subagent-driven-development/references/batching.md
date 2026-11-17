@@ -1,6 +1,6 @@
 # Batching Small Same-Shape Work
 
-Part of super-ripple:subagent-driven-development.
+Part of superripple:subagent-driven-development.
 
 **Batch small same-shape work.** When the plan lists several tasks that are
 each a small, independent edit of the same kind — the same one-line fix,

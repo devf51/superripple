@@ -57,7 +57,7 @@ HEAD_SHA=$(git rev-parse HEAD)
 
 [ส่ง subagent ผู้รีวิวโค้ด]
   DESCRIPTION: เพิ่ม verifyIndex() และ repairIndex() รองรับปัญหา 4 ประเภท
-  PLAN_OR_REQUIREMENTS: Task 2 จาก docs/superpowers/plans/deployment-plan.md
+  PLAN_OR_REQUIREMENTS: Task 2 จาก docs/plans/deployment-plan.md
   BASE_SHA: a7981ec
   HEAD_SHA: 3df7661
 

@@ -1,6 +1,6 @@
 # Bulletproofing Skills Against Rationalization
 
-Part of super-ripple:writing-skills. Use it when the baseline failure is a
+Part of superripple:writing-skills. Use it when the baseline failure is a
 discipline failure: the agent knows the rule and skips it under pressure.
 
 ## Bulletproofing Skills Against Rationalization

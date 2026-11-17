@@ -11,7 +11,7 @@ description: ใช้เมื่อมี spec, design หรือข้อ�
 
 **ประกาศตอนเริ่ม:** "ผมใช้ skill writing-plans เพื่อสร้างแผนการพัฒนา"
 
-**บริบท:** ถ้าทำงานใน worktree แยก มันควรถูกสร้างผ่าน skill `super-ripple:using-git-worktrees` ตอนลงมือ
+**บริบท:** ถ้าทำงานใน worktree แยก มันควรถูกสร้างผ่าน skill `superripple:using-git-worktrees` ตอนลงมือ
 
 **บันทึกแผนที่:** `docs/plans/<topic>-plan.md`
 - (ความต้องการของผู้ใช้เรื่องตำแหน่งแผนชนะค่าตั้งต้นนี้)
@@ -60,7 +60,7 @@ description: ใช้เมื่อมี spec, design หรือข้อ�
 ```markdown
 # แผนการพัฒนา [ชื่อฟีเจอร์]
 
-> **สำหรับ agent ผู้ทำงาน:** SUB-SKILL ที่ต้องใช้: ใช้ super-ripple:subagent-driven-development (แนะนำ) หรือ super-ripple:executing-plans เพื่อทำแผนนี้ทีละงาน ขั้นตอนใช้ไวยากรณ์ checkbox (`- [ ]`) เพื่อติดตาม
+> **สำหรับ agent ผู้ทำงาน:** SUB-SKILL ที่ต้องใช้: ใช้ superripple:subagent-driven-development (แนะนำ) หรือ superripple:executing-plans เพื่อทำแผนนี้ทีละงาน ขั้นตอนใช้ไวยากรณ์ checkbox (`- [ ]`) เพื่อติดตาม
 
 **เป้าหมาย:** [ประโยคเดียวที่บอกว่าสร้างอะไร]
 
@@ -172,7 +172,7 @@ git commit -m "feat: add specific feature"
 
 - แก้เฉพาะงานที่กระทบ และงานที่ใช้ `Interfaces` ของมัน แล้วตรวจความสอดคล้องของชนิดซ้ำ
 - งานที่ทำเสร็จแล้วและไม่กระทบ ไม่ต้องทำซ้ำ งานที่กระทบและเสร็จแล้ว ให้เพิ่มงานแก้ต่อท้ายแทนการแก้ย้อนหลัง
-- ถ้าที่ขอแก้เปลี่ยน spec หรือ design ให้แก้เอกสารนั้นก่อน (`super-ripple:design`) แล้วจึงปรับแผน
+- ถ้าที่ขอแก้เปลี่ยน spec หรือ design ให้แก้เอกสารนั้นก่อน (`superripple:design`) แล้วจึงปรับแผน
 
 ## การส่งต่อเพื่อลงมือ
 
@@ -192,7 +192,7 @@ git commit -m "feat: add specific feature"
 **"แผนเสร็จและบันทึกที่ `docs/plans/<topic>-plan.md` แล้ว กรุณารีวิวแผน ตรงกับที่คุณต้องการไหม?"**
 
 **ถ้าเลือก Subagent-driven:**
-- **SUB-SKILL ที่ต้องใช้:** ใช้ super-ripple:subagent-driven-development
+- **SUB-SKILL ที่ต้องใช้:** ใช้ superripple:subagent-driven-development
 
 **ถ้าเลือก Native:**
-- **SUB-SKILL ที่ต้องใช้:** ใช้ super-ripple:executing-plans
+- **SUB-SKILL ที่ต้องใช้:** ใช้ superripple:executing-plans

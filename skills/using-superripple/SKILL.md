@@ -1,5 +1,5 @@
 ---
-name: using-superpowers
+name: using-superripple
 description: ใช้เมื่อเริ่มบทสนทนาใดๆ - กำหนดวิธีค้นหาและใช้ skill โดยต้องเรียก skill ก่อนตอบทุกครั้ง รวมถึงก่อนถามคำถามเพื่อขอความชัดเจน
 ---
 
@@ -25,11 +25,11 @@ description: ใช้เมื่อเริ่มบทสนทนาใด�
 
 ## ลำดับความสำคัญของ skill
 
-เมื่อมีหลาย skill ที่เกี่ยวข้อง ให้ใช้ skill ด้านกระบวนการก่อน เพราะมันกำหนดแนวทาง แล้วค่อยใช้ skill ด้านการลงมือ (frontend-design ฯลฯ) brainstorming และ systematic-debugging เป็น skill ด้านกระบวนการที่พบบ่อยที่สุดของ Superpowers แต่กฎนี้ใช้กับ skill กระบวนการทุกตัว
+เมื่อมีหลาย skill ที่เกี่ยวข้อง ให้ใช้ skill ด้านกระบวนการก่อน เพราะมันกำหนดแนวทาง แล้วค่อยใช้ skill ด้านการลงมือ (frontend-design ฯลฯ) brainstorming และ systematic-debugging เป็น skill ด้านกระบวนการที่พบบ่อยที่สุดของ superripple แต่กฎนี้ใช้กับ skill กระบวนการทุกตัว
 
-- "มาสร้าง X กัน" → super-ripple:brainstorming ก่อน แล้วค่อย skill ด้านการลงมือ
-- "แก้บั๊กนี้" → super-ripple:systematic-debugging ก่อน แล้วค่อย skill เฉพาะด้าน
-- สร้างระบบซอฟต์แวร์ตั้งแต่ต้น → super-ripple:brainstorming (ได้ spec) → super-ripple:design (ได้ design) → super-ripple:writing-plans (ได้แผน) → ลงมือ ทุกขั้นเริ่มกลางทางได้ถ้ามีอินพุตของมัน ไม่ต้องย้อนไปขั้นก่อน
+- "มาสร้าง X กัน" → superripple:brainstorming ก่อน แล้วค่อย skill ด้านการลงมือ
+- "แก้บั๊กนี้" → superripple:systematic-debugging ก่อน แล้วค่อย skill เฉพาะด้าน
+- สร้างระบบซอฟต์แวร์ตั้งแต่ต้น → superripple:brainstorming (ได้ spec) → superripple:design (ได้ design) → superripple:writing-plans (ได้แผน) → ลงมือ ทุกขั้นเริ่มกลางทางได้ถ้ามีอินพุตของมัน ไม่ต้องย้อนไปขั้นก่อน
 
 ## สัญญาณเตือน
 
