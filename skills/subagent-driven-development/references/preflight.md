@@ -6,7 +6,7 @@ dispatching Task 1.
 Before dispatching Task 1, scan the plan once for conflicts, writing down
 what you checked as you check it:
 
-- tasks that contradict each other or the plan's Global Constraints
+- tasks that contradict each other or the plan's Global Constraints ("ข้อจำกัดทั่วไป")
 - anything the plan explicitly mandates that the review rubric treats as a
   defect (a test that asserts nothing, verbatim duplication of a logic block)
 

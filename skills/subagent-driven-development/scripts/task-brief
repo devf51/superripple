@@ -44,10 +44,11 @@ fi
 # stays in its brief (### Task 7 keeps #### Task 7a), as it always has.
 # Depth alone is not enough: plans drift from "## Task 1" to "### Task 2".
 #
-# The word stays the English literal "Task", whatever language the rest of
-# the plan is in. A plan with no Task headings at all usually translated it
-# ("## Tarea 1"), so list the headings shaped like tasks before the
-# not-found error instead of implying the plan has no task 1 (#2496).
+# The word is the English literal "Task" or the Thai "งานที่" (the Thai
+# writing-plans template uses "### งานที่ N:"). A plan with no task headings
+# at all usually translated it another way ("## Tarea 1"), so list the
+# headings shaped like tasks before the not-found error instead of implying
+# the plan has no task 1 (#2496).
 #
 # A fence that never closes hides every Task heading after it (#2436). When
 # it hides one while the requested task is being captured, that task's end
@@ -60,11 +61,12 @@ fi
 # backslashes of a Windows path.
 rc=0
 TASK_BRIEF_PLAN="$plan" awk -v n="$n" '
+  BEGIN { H = "^#+[ \t]+(Task[ \t]+|งานที่[ \t]*)" }
   /^```/ { infence = !infence; if (infence) { fence_line = NR; hidden = 0 } }
-  infence && /^#+[ \t]+Task[ \t]/ { hidden = 1 }
-  !infence && /^#+[ \t]+Task[ \t]/ {
+  infence && $0 ~ H { hidden = 1 }
+  !infence && $0 ~ H {
     id = $0
-    sub(/^#+[ \t]+Task[ \t]+/, "", id)
+    sub(H, "", id)
     if (match(id, /^[A-Za-z0-9]+(\.[A-Za-z0-9]+)*/) && substr(id, 1, RLENGTH) ~ /[0-9]/) {
       tasks++
       id = substr(id, 1, RLENGTH)
@@ -90,7 +92,7 @@ TASK_BRIEF_PLAN="$plan" awk -v n="$n" '
     # An open fence that hid Task headings already explains why none were
     # seen; the English-word hint would contradict it.
     if (!tasks && shaped && !(infence && hidden)) {
-      print "task-brief: no task headings found. Task headings must use the English word \"Task\" (\"### Task 1: ...\"), even when the rest of the plan is in another language. Headings shaped like tasks:" | "cat >&2"
+      print "task-brief: no task headings found. Task headings must use \"Task\" or \"งานที่\" (\"### Task 1: ...\" or \"### งานที่ 1: ...\"). Headings shaped like tasks:" | "cat >&2"
       for (i = 1; i <= shaped; i++) print "  " shaped_heading[i] | "cat >&2"
     }
   }

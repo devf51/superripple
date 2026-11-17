@@ -25,7 +25,7 @@ description: ใช้เมื่อเริ่มบทสนทนาใด�
 
 ## ลำดับความสำคัญของ skill
 
-เมื่อมีหลาย skill ที่เกี่ยวข้อง ให้ใช้ skill ด้านกระบวนการก่อน เพราะมันกำหนดแนวทาง แล้วค่อยใช้ skill ด้านการลงมือ (frontend-design ฯลฯ) brainstorming และ systematic-debugging เป็น skill ด้านกระบวนการที่พบบ่อยที่สุดของ superripple แต่กฎนี้ใช้กับ skill กระบวนการทุกตัว
+เมื่อมีหลาย skill ที่เกี่ยวข้อง ให้ใช้ skill ด้านกระบวนการก่อน เพราะมันกำหนดแนวทาง แล้วค่อยใช้ skill ด้านการลงมือ (impeccable ฯลฯ) brainstorming และ systematic-debugging เป็น skill ด้านกระบวนการที่พบบ่อยที่สุดของ superripple แต่กฎนี้ใช้กับ skill กระบวนการทุกตัว
 
 - "มาสร้าง X กัน" → superripple:brainstorming ก่อน แล้วค่อย skill ด้านการลงมือ
 - "แก้บั๊กนี้" → superripple:systematic-debugging ก่อน แล้วค่อย skill เฉพาะด้าน

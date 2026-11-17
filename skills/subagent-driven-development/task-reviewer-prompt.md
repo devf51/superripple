@@ -193,7 +193,7 @@ Subagent (general-purpose):
   run by its absolute path, from the working tree you're executing in,
   prints the path; same file the implementer worked from)
 - `[GLOBAL_CONSTRAINTS]` — the binding requirements copied verbatim from
-  the plan's Global Constraints section or the spec: exact values, formats,
+  the plan's Global Constraints section ("ข้อจำกัดทั่วไป" in Thai plans) or the spec: exact values, formats,
   and stated relationships between components (not process rules — those
   are already in this template)
 - `[REPORT_FILE]` — REQUIRED: the file the implementer wrote its detailed

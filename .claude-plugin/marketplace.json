@@ -2,8 +2,8 @@
   "name": "superripple-dev",
   "description": "Development marketplace for superripple core skills library",
   "owner": {
-    "name": "Jesse Vincent",
-    "email": "jesse@fsck.com"
+    "name": "devf51",
+    "email": "06082551aidev@gmail.com"
   },
   "plugins": [
     {
@@ -12,8 +12,8 @@
       "version": "7.0.2",
       "source": "./",
       "author": {
-        "name": "Jesse Vincent",
-        "email": "jesse@fsck.com"
+        "name": "devf51",
+        "email": "06082551aidev@gmail.com"
       }
     }
   ]

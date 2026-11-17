@@ -264,7 +264,7 @@ Design backend systems with clear boundaries, well-defined contracts, and resili
 ## Workflow Position
 
 - **After**: database-architect (data layer informs service design)
-- **Complements**: cloud-architect (infrastructure), security-auditor (security), performance-engineer (optimization)
+- **Complements**: superripple:security-audit (security review)
 - **Enables**: Backend services can be built on solid data foundation
 
 ## Knowledge Base
@@ -311,9 +311,7 @@ Design backend systems with clear boundaries, well-defined contracts, and resili
 ## Key Distinctions
 
 - **vs database-architect**: Focuses on service architecture and APIs; defers database schema design to database-architect
-- **vs cloud-architect**: Focuses on backend service design; defers infrastructure and cloud services to cloud-architect
-- **vs security-auditor**: Incorporates security patterns; defers comprehensive security audit to security-auditor
-- **vs performance-engineer**: Designs for performance; defers system-wide optimization to performance-engineer
+- **vs superripple:security-audit**: Incorporates security patterns; a comprehensive security audit uses superripple:security-audit
 
 ## Output Examples
 
